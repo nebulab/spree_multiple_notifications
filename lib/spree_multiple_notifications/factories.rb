@@ -1,6 +1,6 @@
-FactoryGirl.define do
-  # Define your Spree extensions Factories within this file to enable applications, and other extensions to use and override them.
-  #
-  # Example adding this to your spec_helper will load these Factories for use:
-  # require 'spree_multiple_notifications/factories'
+FactoryGirl.modify do
+  factory :shipped_order do
+    additional_confirmation_emails 3.times.map { Faker::Internet.email }.join(",")
+    additional_shipment_notification_emails 3.times.map { Faker::Internet.email }.join(",")
+  end
 end
