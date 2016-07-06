@@ -1,0 +1,1 @@
+Spree::PermittedAttributes.checkout_attributes.push :additional_confirmation_emails, :additional_shipment_notification_emails

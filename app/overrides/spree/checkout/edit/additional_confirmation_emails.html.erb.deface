@@ -1,0 +1,23 @@
+<!-- insert_after "[data-hook='checkout_content'] div div.panel" -->
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="form-group">
+      <%= form.label :additional_confirmation_emails %>
+      <%= form.text_field :additional_confirmation_emails,
+                          class: 'form-control',
+                          placeholder: "ap@mail.com, rep@mail.com" %>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="form-group">
+      <%= form.label :additional_shipment_notification_emails %>
+      <%= form.text_field :additional_shipment_notification_emails,
+                          class: 'form-control',
+                          placeholder: "ap@mail.com, rep@mail.com" %>
+    </div>
+  </div>
+</div>
