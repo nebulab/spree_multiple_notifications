@@ -1,7 +1,7 @@
 SpreeMultipleNotifications
 ==========================
 
-Introduction goes here.
+Insert additional email addresses at order checkout step.
 
 ## Installation
 

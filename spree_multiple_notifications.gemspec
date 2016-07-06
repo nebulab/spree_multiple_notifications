@@ -3,13 +3,13 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_multiple_notifications'
   s.version     = '3.0.9'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Delivers some system emails to multiple recipients'
+  s.description = s.summary
   s.required_ruby_version = '>= 2.1.0'
 
-  # s.author    = 'You'
-  # s.email     = 'you@example.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+  s.author    = 'Paolo Tatone'
+  s.email     = 'paolotatone@nebulab.it'
+  s.homepage  = 'http://nebulab.it'
   s.license = 'BSD-3'
 
   # s.files       = `git ls-files`.split("\n")
