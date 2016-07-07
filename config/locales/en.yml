@@ -2,4 +2,8 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      spree/order:
+        additional_confirmation_emails: Need your ORDER CONFIRMATION email? Enter one or more email addresses
+        additional_shipment_notification_emails: Need your SHIPMENT NOTIFICATION email? Enter one or more email addresses
