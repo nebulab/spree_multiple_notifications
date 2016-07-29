@@ -20,18 +20,6 @@ describe Spree::Order, :type => :model do
       order.next # go from address to delivery
     end
 
-    context "when emails are blank" do
-      let(:additional_confirmation_emails)          { "" }
-      let(:additional_shipment_notification_emails) { "" }
-
-      it "will have validation errors (can't be blank, is invalid)" do
-        expect(order.errors[:additional_confirmation_emails].size).to          eq (2)
-        expect(order.errors[:additional_confirmation_emails]).to               eq (["can't be blank", "is invalid"])
-        expect(order.errors[:additional_shipment_notification_emails].size).to eq (2)
-        expect(order.errors[:additional_shipment_notification_emails]).to      eq (["can't be blank", "is invalid"])
-      end
-    end
-
     context "when emails format is wrong" do
       let(:additional_confirmation_emails)          { "wrong email address" }
       let(:additional_shipment_notification_emails) { "wrong email address" }
@@ -52,5 +40,18 @@ describe Spree::Order, :type => :model do
         expect(order.state).to eq ('delivery')
       end
     end
+
+    ## MUTING TEST.WE ARE NOW ACCEPTING BLANK FIELDS
+    # context "when emails are blank" do
+    #   let(:additional_confirmation_emails)          { "" }
+    #   let(:additional_shipment_notification_emails) { "" }
+    #
+    #   it "will have validation errors (can't be blank, is invalid)" do
+    #     expect(order.errors[:additional_confirmation_emails].size).to          eq (2)
+    #     expect(order.errors[:additional_confirmation_emails]).to               eq (["can't be blank", "is invalid"])
+    #     expect(order.errors[:additional_shipment_notification_emails].size).to eq (2)
+    #     expect(order.errors[:additional_shipment_notification_emails]).to      eq (["can't be blank", "is invalid"])
+    #   end
+    # end
   end
 end
