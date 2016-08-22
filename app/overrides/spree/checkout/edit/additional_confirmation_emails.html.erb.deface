@@ -5,6 +5,7 @@
     <div class="form-group">
       <%= form.label :additional_confirmation_emails %>
       <%= form.text_field :additional_confirmation_emails,
+                          value: spree_current_user.try(:email),
                           class: 'form-control',
                           placeholder: "ap@mail.com, rep@mail.com" %>
     </div>
@@ -16,6 +17,7 @@
     <div class="form-group">
       <%= form.label :additional_shipment_notification_emails %>
       <%= form.text_field :additional_shipment_notification_emails,
+                          value: spree_current_user.try(:email),
                           class: 'form-control',
                           placeholder: "ap@mail.com, rep@mail.com" %>
     </div>
